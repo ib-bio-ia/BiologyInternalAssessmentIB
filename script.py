@@ -12,7 +12,7 @@ from scipy.stats import ttest_ind
 ##################################
 #                                #
 # Biology HL Internal Assessment #
-#            IB 2019             #
+#          IB May 2019           #
 #                                #
 ##################################
 
@@ -22,19 +22,22 @@ from scipy.stats import ttest_ind
 # Explanation of this file #
 ############################
 
+
 If .csv files are needed, input one (any) sys.argv.
 This will save raw and processed data tables,
 as well as the t-test table.
 This will also give a .png image of the graph.
 
+
 #####
-This file analyses data from Allan Brain Atlas,
-"Age and Dementia !!!!"
-to answer the research question:
+This file analyses data from Allen Brain Atlas,
+"Aging, Dementia and TBI study" to answer the
+following research question:
   How does the pTau-181 protein concentration change
   in the hippocampus, the temporal cortex, the frontal
   white matter, and the parietal cortex in the brain
   with the progression of Braak stages?
+
 
 #####
 The following are the steps this programme:
@@ -54,10 +57,14 @@ The following are the steps this programme:
 Functions written in this file:
 * fn_make_raw_df: makes raw data tables
 * fn_stderr: finds standard error
+* fn_into_braaks: separates data into Braak stages
 * fn_make_processed_table: makes processed data table
-* fn_save_csv: saves tables as csv
-* fn_make_graph: makes graph
+* fn_save_csv: saves tables as .csv file
+* fn_make_graph: makes processed data graph
 * fn_t_test: does t_test
+* fn_t_test_struct: t_test for one brain structure data
+* fn_t_test_table: makes t_test table (t and p values)
+
 
 #####
 All variable names are written in Hungarian notation:
